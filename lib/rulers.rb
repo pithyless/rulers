@@ -1,4 +1,5 @@
 require 'rulers/inflector'
+require 'rulers/dependencies'
 
 require 'core_ext/string'
 require 'core_ext/enumerable'
