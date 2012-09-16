@@ -1,4 +1,8 @@
+require 'rulers/inflector'
+
+require 'core_ext/string'
 require 'core_ext/enumerable'
+
 require 'rulers/controller'
 require 'rulers/router'
 
