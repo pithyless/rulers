@@ -15,4 +15,6 @@ Gem::Specification.new do |gem|
   gem.version       = '0.0.1'
 
   gem.add_runtime_dependency "rack"
+
+  gem.add_development_dependency "rspec"
 end
