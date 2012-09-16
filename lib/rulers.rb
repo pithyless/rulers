@@ -1,3 +1,5 @@
+require 'core_ext/enumerable'
+
 module Rulers
   class Application
     def call(env)
