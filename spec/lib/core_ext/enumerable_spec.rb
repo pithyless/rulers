@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'rulers'
 
 describe 'Enumerable extensions' do
 
