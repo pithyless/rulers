@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.version       = '0.0.3'
 
   gem.add_runtime_dependency "rack"
+  gem.add_runtime_dependency "erubis"
 
   gem.add_development_dependency "rspec"
 end
