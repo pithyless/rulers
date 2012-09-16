@@ -10,7 +10,9 @@ module Rulers
   class Application
 
     def call(env)
-      `echo #{env['REQUEST_METHOD']} #{env['REQUEST_URI']} >> log/debug.log`
+      log_request(env)
+
+      return not_found if asset?(env)
 
       klass, action = Router.new.controller_and_action(env)
       controller = klass.new(env)
@@ -23,5 +25,18 @@ module Rulers
       ]
     end
 
+    private
+
+    def log_request(env)
+      `echo #{env['REQUEST_METHOD']} #{env['REQUEST_URI']} >> log/debug.log`
+    end
+
+    def not_found
+      [404, {'Content-Type' => 'text/html'}, []]
+    end
+
+    def asset?(env)
+      env['PATH_INFO'] == '/favicon.ico'
+    end
   end
 end
