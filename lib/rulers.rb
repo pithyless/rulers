@@ -1,6 +1,7 @@
 module Rulers
   class Application
     def call(env)
+      `echo #{env['REQUEST_METHOD']} #{env['REQUEST_URI']} >> log/debug.log`
       [
         200,
         {'Content-Type' => 'text/html'},
