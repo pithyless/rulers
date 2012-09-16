@@ -13,4 +13,6 @@ Gem::Specification.new do |gem|
   gem.name          = "rulers"
   gem.require_paths = ["lib"]
   gem.version       = '0.0.1'
+
+  gem.add_runtime_dependency "rack"
 end
